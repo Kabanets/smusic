@@ -2,7 +2,6 @@ package main
 
 import (
 	"encoding/json"
-	"fmt"
 	"os"
 	// "time"
 	// "bitbucket.org/weberc2/media/ao"
@@ -45,9 +44,9 @@ func main() {
 	config := new(Config)
 	err := decoder.Decode(&config)
 	if err != nil {
-		log.Fatalf("Config file not found.")
+		log.Fatalf("Config file not found or corrupt.")
 	}
-	fmt.Printf("%v", config)
+
 	// if len(os.Args) < 2 {
 	// 	os.Exit(0)
 	// }
