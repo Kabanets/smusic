@@ -4,29 +4,29 @@
     "weekdaysStopTime" : "20:00",
     "weekendsStartTime" : "08:00",
     "weekendsStopTime" : "21:00",
-    "mainMediaPlan" : [
+    "mediaFolders" : [
         {
-            "path" : "/music/m1",
+            "path" : "./music/m1",
             "songs" : 2
         },
         {
-            "path" : "/music/m2",
+            "path" : "./music/m2",
             "songs" : 1
         },
         {
-            "path" : "/music/r1",
+            "path" : "./music/r1",
             "songs" : 1
         },
         {
-            "path" : "/music/m2",
-            "songs" : 1
-        },
-        {
-            "path" : "/music/m3",
+            "path" : "./music/m2",
             "songs" : 2
+        },
+        {
+            "path" : "./music/m3",
+            "songs" : 1
         },
                 {
-            "path" : "/music/r2",
+            "path" : "./music/r2",
             "songs" : 1
         }
     ]
