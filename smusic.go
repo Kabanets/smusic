@@ -24,7 +24,7 @@ func main() {
 				mpg123.Initialize()
 				defer mpg123.Exit()
 
-				handle, err := mpg123.Open(mf.Path + "/" + f)
+				handle, err := mpg123.Open(f)
 				if err != nil {
 					continue
 				}
@@ -32,6 +32,7 @@ func main() {
 
 				ao.Initialize()
 				defer ao.Shutdown()
+
 				dev := ao.NewLiveDevice(aoSampleFormat(handle))
 				defer dev.Close()
 
