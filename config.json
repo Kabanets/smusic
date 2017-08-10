@@ -6,8 +6,8 @@
     "weekendsStopTime" : "21:00",
     "mediaFolders" : [
         {
-            "path" : "/Volumes/KINGSTON/1. Инструм-Оркестровый",
-            "songs" : 200
+            "path" : "./music/m2",
+            "songs" : 2
         },
         {
             "path" : "./music/m2",
