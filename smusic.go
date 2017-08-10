@@ -19,6 +19,8 @@ func main() {
 			for i := 0; i < mf.Songs; i++ {
 				f := mf.getNextMediaFile()
 
+				println(f)
+
 				mpg123.Initialize()
 				defer mpg123.Exit()
 
