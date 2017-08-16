@@ -48,6 +48,7 @@ func (mf *mediaFolder) getNextMediaFile() (mediaFileName string) {
 				}
 			}
 		}
+
 	}
 	ioutil.WriteFile(mf.Path+"/.index", []byte(result), 0644)
 	return result

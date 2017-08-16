@@ -4,18 +4,22 @@ import (
 	"encoding/json"
 	"log"
 	"os"
+	"time"
 )
 
 type shop struct {
-	ShopID           string
-	WeekdayStartTime string
-	WeekdayStopTime  string
-	WeekendStartTime string
-	WeekendStopTime  string
-	MediaFolders     []mediaFolder
+	WeekdayStartHour   int
+	WeekdayStartMinute int
+	WeekdayStopHour    int
+	WeekdayStopMinute  int
+	WeekendStartHour   int
+	WeekendStartMinute int
+	WeekendStopHour    int
+	WeekendStopMinute  int
+	MediaFolders       []mediaFolder
 }
 
-func (s *shop) configure() {
+func (s *shop) Configure() {
 	file, err := os.Open("config.json")
 	if err != nil {
 		log.Fatalf("Config file not found")
@@ -32,4 +36,36 @@ func (s *shop) configure() {
 			log.Fatalf("Can not load files from mediafolder %v.", s.MediaFolders[i].Path)
 		}
 	}
+}
+
+func (s *shop) StartHour() (hour int) {
+	wday := time.Now().Weekday()
+	if wday > 0 && wday < 6 {
+		return s.WeekdayStartHour
+	}
+	return s.WeekendStartHour
+}
+
+func (s *shop) StartMinute() (minute int) {
+	wday := time.Now().Weekday()
+	if wday > 0 && wday < 6 {
+		return s.WeekdayStartMinute
+	}
+	return s.WeekendStartMinute
+}
+
+func (s *shop) StopHour() (hour int) {
+	wday := time.Now().Weekday()
+	if wday > 0 && wday < 6 {
+		return s.WeekdayStopHour
+	}
+	return s.WeekendStopHour
+}
+
+func (s *shop) StopMinute() (minute int) {
+	wday := time.Now().Weekday()
+	if wday > 0 && wday < 6 {
+		return s.WeekdayStopMinute
+	}
+	return s.WeekendStopMinute
 }

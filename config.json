@@ -1,10 +1,13 @@
 {
-    "shopId": "Hozzy1",
-    "weekdaysStartTime" : "08:00",
-    "weekdaysStopTime" : "20:00",
-    "weekendsStartTime" : "08:00",
-    "weekendsStopTime" : "21:00",
-    "mediaFolders" : [
+    "WeekdayStartHour" : 8,
+    "WeekdayStartMinute" : 0,
+    "WeekdayStopHour" : 20,
+    "WeekdayStopMinute" : 0,
+    "WeekendStartHour" : 8,
+    "WeekendStartMinute" : 0,
+    "WeekendStopHour" : 21,
+    "WeekendStopMinute" : 0,
+    "MediaFolders" : [
         {
             "path" : "./music/m2",
             "songs" : 2
