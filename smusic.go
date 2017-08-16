@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"time"
 )
 
@@ -21,7 +22,7 @@ func main() {
 				}
 
 				f := mf.getNextMediaFile()
-				println(f)
+				fmt.Printf("%v\t%v\n", time.Now(), f)
 
 				p := new(player)
 				if err := p.play(f); err != nil {
