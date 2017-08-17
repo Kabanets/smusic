@@ -20,7 +20,7 @@ type shop struct {
 }
 
 func (s *shop) Configure() {
-	file, err := os.Open("config.json")
+	file, err := os.Open("./config.json")
 	if err != nil {
 		log.Fatalf("Config file not found")
 	}
