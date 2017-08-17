@@ -37,5 +37,8 @@ debug
 ehthumbs.db
 Thumbs.db
 
-music
+docs
+vision.txt
 .vscode
+.gitignore
+music
