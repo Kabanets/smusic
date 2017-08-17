@@ -14,18 +14,6 @@ type mediaFolder struct {
 }
 
 func (mf *mediaFolder) loadMediaFiles() error {
-	// dh, err := os.Open(mf.Path)
-	// defer dh.Close()
-	// if err == nil {
-	// 	fs, err := dh.Readdir(0)
-	// 	if err == nil {
-	// 		for _, fi := range fs {
-	// 			if !fi.IsDir() && strings.HasSuffix(fi.Name(), ".mp3") {
-	// 				mf.MediaFiles = append(mf.MediaFiles, fi.Name())
-	// 			}
-	// 		}
-	// 	}
-	// }
 	err := filepath.Walk(mf.Path, func(path string, info os.FileInfo, err error) error {
 		if !info.IsDir() && strings.HasSuffix(info.Name(), ".mp3") {
 			mf.MediaFiles = append(mf.MediaFiles, path)
