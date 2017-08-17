@@ -1,11 +1,13 @@
-package main
+// Package smusic is a music player for shop with using Raspbbery PI
+package smusic
 
 import (
-	"fmt"
+	"log"
 	"time"
 )
 
-func main() {
+// Start function initialize media-folders and start to play music
+func Start() {
 	// Загрузить конфиг
 	shop := new(shop)
 	shop.Configure()
@@ -22,11 +24,11 @@ func main() {
 				}
 
 				f := mf.getNextMediaFile()
-				fmt.Printf("%v\t%v\n", time.Now(), f)
+				log.Println(f)
 
 				p := new(player)
 				if err := p.play(f); err != nil {
-					println(err)
+					log.Println(err)
 					continue
 				}
 			}

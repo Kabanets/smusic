@@ -1,0 +1,36 @@
+{
+    "WeekdayStartHour" : 8,
+    "WeekdayStartMinute" : 0,
+    "WeekdayStopHour" : 20,
+    "WeekdayStopMinute" : 0,
+    "WeekendStartHour" : 8,
+    "WeekendStartMinute" : 0,
+    "WeekendStopHour" : 21,
+    "WeekendStopMinute" : 0,
+    "MediaFolders" : [
+        {
+            "path" : "./music/m2",
+            "songs" : 2
+        },
+        {
+            "path" : "./music/m2",
+            "songs" : 1
+        },
+        {
+            "path" : "./music/r1",
+            "songs" : 1
+        },
+        {
+            "path" : "./music/m2",
+            "songs" : 2
+        },
+        {
+            "path" : "./music/m3",
+            "songs" : 1
+        },
+                {
+            "path" : "./music/r2",
+            "songs" : 1
+        }
+    ]
+}
